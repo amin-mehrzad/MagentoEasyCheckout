@@ -7,4 +7,10 @@
     </event>
     <event name="sales_order_save_after">
     </event> -->
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="orderInformation" instance="XCode\PaymentAgeVerification\Observer\OrderInformation" />
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="changeState" instance="XCode\PaymentAgeVerification\Observer\ChangeState" />
+    </event>
 </config>
